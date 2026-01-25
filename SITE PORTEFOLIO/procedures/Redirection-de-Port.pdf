@@ -1,0 +1,169 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources 4 0 R /MediaBox [0 0 612 792] /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> /F2 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >> >> >>
+endobj
+5 0 obj
+<< /Length 3400 >>
+stream
+BT
+/F2 24 Tf
+50 750 Td
+(PROCEDURE : Redirection de Port) Tj
+ET
+BT
+/F1 12 Tf
+50 720 Td
+(Objectif : Configurer une redirection de port sur Debian avec iptables ou firewall) Tj
+ET
+BT
+/F2 14 Tf
+50 690 Td
+(METHODE 1 : Avec iptables) Tj
+ET
+BT
+/F1 11 Tf
+50 665 Td
+(1. Autoriser le routage IP :) Tj
+ET
+BT
+50 645 Td
+(   sudo sysctl -w net.ipv4.ip_forward=1) Tj
+ET
+BT
+50 625 Td
+(2. Pour rendre le changement permanent, editer :) Tj
+ET
+BT
+50 605 Td
+(   sudo nano /etc/sysctl.conf) Tj
+ET
+BT
+50 585 Td
+(   Ajouter la ligne : net.ipv4.ip_forward=1) Tj
+ET
+BT
+50 565 Td
+(3. Redirection de port entrant (ex: port 8080 vers 80) :) Tj
+ET
+BT
+50 545 Td
+(   sudo iptables -t nat -A PREROUTING -p tcp --dport 8080 -j) Tj
+ET
+BT
+50 525 Td
+(   REDIRECT --to-port 80) Tj
+ET
+BT
+50 505 Td
+(4. Redirection NAT (vers une autre machine) :) Tj
+ET
+BT
+50 485 Td
+(   sudo iptables -t nat -A PREROUTING -p tcp --dport 8080) Tj
+ET
+BT
+50 465 Td
+(   -j DNAT --to-destination 192.168.1.50:80) Tj
+ET
+BT
+50 445 Td
+(5. Redirection de sortie :) Tj
+ET
+BT
+50 425 Td
+(   sudo iptables -t nat -A POSTROUTING -j MASQUERADE) Tj
+ET
+BT
+50 405 Td
+(6. Verifier les regles :) Tj
+ET
+BT
+50 385 Td
+(   sudo iptables -t nat -L -v -n) Tj
+ET
+BT
+50 365 Td
+(7. Sauvegarder les regles de maniere permanente :) Tj
+ET
+BT
+50 345 Td
+(   sudo apt install iptables-persistent) Tj
+ET
+BT
+50 325 Td
+(   sudo iptables-save > /etc/iptables/rules.v4) Tj
+ET
+BT
+/F2 14 Tf
+50 290 Td
+(METHODE 2 : Avec UFW (Uncomplicated Firewall)) Tj
+ET
+BT
+/F1 11 Tf
+50 265 Td
+(1. Installer UFW :) Tj
+ET
+BT
+50 245 Td
+(   sudo apt install ufw) Tj
+ET
+BT
+50 225 Td
+(2. Activer UFW :) Tj
+ET
+BT
+50 205 Td
+(   sudo ufw enable) Tj
+ET
+BT
+50 185 Td
+(3. Ajouter une redirection de port :) Tj
+ET
+BT
+50 165 Td
+(   sudo ufw route allow in on eth0 to 192.168.1.50) Tj
+ET
+BT
+50 145 Td
+(   port 80 proto tcp) Tj
+ET
+BT
+50 125 Td
+(4. Verifier les regles :) Tj
+ET
+BT
+50 105 Td
+(   sudo ufw status numbered) Tj
+ET
+BT
+50 85 Td
+(5. Supprimer une regle :) Tj
+ET
+BT
+50 65 Td
+(   sudo ufw delete [numero_regle]) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000229 00000 n 
+0000000373 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+3833
+%%EOF
