@@ -33,6 +33,7 @@
       <li><a href="#bts">BTS SIO</a></li>
       <li><a href="#projet-m2l">Projet M2L</a></li>
       <li><a href="#procedures">Procédures</a></li>
+      <li><a href="#stage">Stage</a></li>
       <li><a href="#competences">Compétences</a></li>
       <li><a href="#avenir">Projet pro</a></li>
       <li><a href="#documents">Documents</a></li>
@@ -110,6 +111,13 @@
         <div><b>DNS</b>Redirecteurs vers Internet, réplication vérifiée et distribution aux clients via les serveurs DHCP.</div>
         <div><b>Équipements réseau</b>Configuration du switch Cisco SF500-24 : VLAN, trunk, routage, routes statiques.</div>
       </div>
+      <h3>Schéma du réseau</h3>
+      <figure class="schema">
+        <a href="./images/schema-reseau-m2l.png" target="_blank" rel="noopener">
+          <img src="./images/schema-reseau-m2l.png" alt="Schéma du réseau M2L : zone LAN M2L avec les serveurs (AD, DHCP, GLPI, Zabbix, Wazuh…), zone des ligues, pfSense, DMZ publique et DMZ privée" loading="lazy">
+        </a>
+        <figcaption>Architecture de la maquette : LAN M2L (172.16.2.224/27), VLAN des ligues, DMZ privée (192.168.1.0/28), DMZ publique (192.168.0.0/29) et accès Internet via pfSense. Clique sur l'image pour l'agrandir.</figcaption>
+      </figure>
       <a class="btn" href="./procedures/Cahier-des-charges-M2L-2026.pdf" target="_blank" rel="noopener">Lire le cahier des charges (PDF)</a>
     </article>
   </div>
@@ -163,6 +171,31 @@
   </div>
 </section>
 
+<section id="stage">
+  <div class="conteneur">
+    <h2>Stage en entreprise</h2>
+    <article class="carte phare">
+      <span class="etiquette">1<sup>re</sup> année – du 18 mai au 26 juin 2026</span>
+      <h3>3G Groupe – filiale 3G Location (Claye-Souilly, 77)</h3>
+      <p>3G Groupe est une entreprise du BTP et de la promotion immobilière qui compte une trentaine de collaborateurs. Au sein de sa filiale <strong>3G Location</strong>, qui loue du matériel de chantier et des véhicules, j'ai conçu une <strong>application de gestion des locations</strong> avec AppSheet, pour remplacer un suivi manuel dispersé dans plusieurs fichiers.</p>
+      <div class="techs">
+        <span>AppSheet</span><span>Google Sheets</span><span>Google Docs</span><span>Google Drive</span><span>Base de données relationnelle</span><span>Automatisations (bots)</span>
+      </div>
+      <h3>Missions réalisées</h3>
+      <ul class="realisations">
+        <li>Conception de la base de données : 10 tables reliées par des clés</li>
+        <li>Stock en temps réel avec des formules de disponibilité automatiques</li>
+        <li>Formulaires de création et de clôture des contrats de location</li>
+        <li>Retours partiels et suivi des casses avec historique</li>
+        <li>Facturation automatique : génération de PDF depuis un modèle Google Docs</li>
+        <li>Tests sur jeu de données réduit et correction des erreurs (doublon de chantier, syntaxe des modèles)</li>
+      </ul>
+      <p>Ce stage m'a permis de mettre en pratique la conception de bases de données, les règles de gestion et le calcul automatisé, et de découvrir une approche no-code en conditions réelles.</p>
+      <a class="btn" href="./Rapport-de-stage-3G-Groupe.pdf" target="_blank" rel="noopener">Lire mon rapport de stage (PDF)</a>
+    </article>
+  </div>
+</section>
+
 <section id="competences">
   <div class="conteneur">
     <h2>Compétences</h2>
@@ -178,6 +211,10 @@
       <article class="carte">
         <h3>Supervision et sécurité</h3>
         <p>Découverte de GLPI, Zabbix, Wazuh et Snort dans le cadre du projet M2L.</p>
+      </article>
+      <article class="carte">
+        <h3>Applications et données</h3>
+        <p>Conception de base de données relationnelle, application no-code AppSheet, Google Sheets, génération automatique de documents (stage chez 3G Location).</p>
       </article>
       <article class="carte">
         <h3>Web et outils</h3>

@@ -63,6 +63,10 @@ h3{font-size:1.1rem;margin-bottom:.4rem}
 .statut div{border-left:4px solid var(--accent);padding:.2rem 0 .2rem .9rem}
 .statut b{display:block;color:var(--encre)}
 
+.schema{margin:1rem 0 1.5rem}
+.schema img{display:block;width:100%;max-width:860px;height:auto;border:1px solid var(--trait);border-radius:10px;background:#fff}
+.schema figcaption{color:var(--doux);font-size:.92rem;margin-top:.6rem;max-width:80ch}
+
 /* Frise */
 .frise{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.2rem}
 .frise div{border-top:4px solid var(--accent);padding-top:.7rem}
