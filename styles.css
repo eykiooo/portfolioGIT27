@@ -33,6 +33,9 @@ a{color:var(--accent)}
 .carte .btn{background:var(--accent);border-color:var(--accent);color:#fff;margin-top:.8rem}
 @media (prefers-color-scheme:dark){.carte .btn{color:#0b141e}}
 
+.carte .btn.alt{background:transparent;color:var(--accent-fonce);border-color:var(--accent)}
+.carte .btn+.btn{margin-left:.5rem}
+
 /* Sections */
 section{padding:3.5rem 0}
 section:nth-of-type(even){background:color-mix(in srgb,var(--carte) 60%,var(--fond))}
